@@ -19,22 +19,16 @@ fun CalculatorScreen() {
             listOf("7", "8", "9", "*"),
             listOf("0", "C", "=", "/")
         )
-
-        // Usamos un for para recorrer las filas de botones
         for (row in buttons) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
                 row.forEach { symbol ->
-                    // Para cada botón, pasamos una función onClick personalizada
-                    CalculatorButton(symbol = symbol, onClick = {
-                        // Aquí puedes manejar el evento de clic de cada botón
-                        println("Button $symbol clicked")
-                    })
+                    CalculatorButton(symbol = symbol, onClick = {})
                 }
             }
-            Spacer(modifier = Modifier.height(16.dp)) // Espacio entre filas
+            Spacer(modifier = Modifier.height(16.dp))
         }
     }
 }
